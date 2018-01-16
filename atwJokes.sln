@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "atwJokes", "atwJokes\atwJokes.csproj", "{FE370724-6B1A-4B39-910C-A27DC9FEFE2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "atwJokes(FrontEnd)", "atwJokes\atwJokes(FrontEnd).csproj", "{FE370724-6B1A-4B39-910C-A27DC9FEFE2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{F83EED78-5988-4580-81B2-D63B0CE41B36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FE370724-6B1A-4B39-910C-A27DC9FEFE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE370724-6B1A-4B39-910C-A27DC9FEFE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE370724-6B1A-4B39-910C-A27DC9FEFE2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83EED78-5988-4580-81B2-D63B0CE41B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83EED78-5988-4580-81B2-D63B0CE41B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83EED78-5988-4580-81B2-D63B0CE41B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83EED78-5988-4580-81B2-D63B0CE41B36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
