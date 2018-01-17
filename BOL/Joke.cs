@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BOL
 {
-    public class Joke
+    public class Joke : Types.IJokes
     {
         internal Joke() { }
         internal int _id;
