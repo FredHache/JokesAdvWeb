@@ -8,6 +8,8 @@ namespace BOL
 {
     class User : Types.IUsers
     {
+        internal User() { }
+
         internal int _id;
         internal string _first_name;
         internal string _last_name;

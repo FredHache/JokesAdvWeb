@@ -8,7 +8,7 @@ namespace BOL
 {
     public class Joke
     {
-        public Joke() { }
+        internal Joke() { }
         internal int _id;
         internal string _title;
         internal string _teaser;

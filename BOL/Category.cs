@@ -8,6 +8,8 @@ namespace BOL
 {
     class Category : Types.ICategories
     {
+        internal Category() { }
+
         internal int _categoryID;
         internal string _categoryName;
         internal string _description;
