@@ -13,7 +13,7 @@ namespace BOL
         // Category LIST
         public static List<CategoryLookupList> CategoryListFactory()
         {
-            DataTable tmpTable = ;// ADD SQL STATEMENT THINGY
+            DataTable tmpTable = SQL.JokesSQL.RetrieveAllJokesCategory();
             List<CategoryLookupList> tmpCategoryTable = categoryListRepackage(tmpTable);
             return tmpCategoryTable;
         }
@@ -36,7 +36,7 @@ namespace BOL
         // JOKE LIST
         public static List<JokeLookupList> JokeByCategoryListFactory(int CategoryID)
         {
-            DataTable tmpTable = ;// ADD SQL STATEMENT THINGY
+            DataTable tmpTable = SQL.JokesSQL.RetrieveJokesByCategory(CategoryID);
             List<JokeLookupList> tmpJokeTable = jokeByCategoryListRepackage(tmpTable);
             return tmpJokeTable;
         }
@@ -64,7 +64,7 @@ namespace BOL
         // JOKE BY ID
         public static JokeLookupList JokeByIDFactory(int JokeID)
         {
-            DataTable tmpTable = ;// ADD SQL STATEMENT THINGY
+            DataTable tmpTable = SQL.JokesSQL.RetrieveJokesDetails(JokeID);
             JokeLookupList tmpJokeTable = jokeByIDRepackage(tmpTable);
             return tmpJokeTable;
         }
