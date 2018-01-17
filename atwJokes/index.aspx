@@ -21,6 +21,7 @@
                         <asp:DropDownList ID="ddlCategories" runat="server" AppendDataBoundItems="true" AutoPostBack="true" CssClass="DropDownList" OnSelectedIndexChanged="ddlCategories_SelectedIndexChanged">
                <asp:ListItem>--Select a Category--</asp:ListItem>
            </asp:DropDownList>
+
                     </div>
                     <div class="grid-col-9-pad">
                         <asp:Repeater ID="rptJokesByCat" runat="server">
