@@ -1,0 +1,237 @@
+/* 	AGILE Version 1;
+*	Developed by Nathan Noye;
+*	Initial start date: December 5, 2017;
+*	Last update: December 15, 2017;
+*/	
+
+/*	SCREEN SIZES
+* Phone 			            - 	0px - 768px     styles here will only display on mobile
+*	Tablet 		     	        - 	769px - 991px
+*	Small Computer Screen 	- 	992px - 1199px
+*	Medium Computer Screen 	- 	1200px - 1599px
+*	Large Computer Screen 	- 	1600px - 1899px
+*	XLarge Computer Screen 	- 	1900px - 2559
+* 4k resolution           -   2560 and up
+*/
+
+/*FONTS*/
+@font-face {
+    font-family: PrimaryFont;
+    src: url(../fonts/Raleway/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: SecondaryFont;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+/*SET YOUR VARIABLE COLORS HERE*/
+:root {
+	/*Colors*/
+  --color-primary: #f39C12; 
+  --color-primary-darker: #c27b0a;  
+  --color-secondary: #7621C0;   
+  --color-secondary-darker: #5B04A6;  		            
+  --color-tertiary: #191919;
+
+  --nav-bg-color: #191919;
+  --nav-color: #f9f9f9;
+
+  --a-hover: var(--color-primary);
+
+  --footer-color: #f9f9f9;
+  --footer-bg-color: #191919;
+
+  /*Fonts*/
+  --font-primary: 'PrimaryFont', 'Verdana';            
+  --font-secondary: 'SecondaryFont', 'Arial';              
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+/*GLOBAL STYLES*/
+
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2{
+	font-size: 42px;
+}
+
+h3{
+  font-size: 36px;
+}
+
+h4{
+  font-size: 30px;
+}
+
+h5{
+  font-size: 24px;
+}
+
+h6{
+  font-size: 18px;
+}
+
+p {
+	color: var(--color-tertiary);
+  font-family: var(--font-secondary);
+	font-size: 18px;
+}
+
+a{
+    color: var(--nav-color);
+    transition: .2s;
+}
+
+a:hover {
+    color: var(--a-hover);
+}
+
+.footer{
+    width: 100%;
+    color: var(--footer-color);
+    background-color: var(--footer-bg-color);
+    padding: 2% 5%;
+}
+
+.footer p {
+	color: var(--footer-color);
+  font-weight: lighter;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/*CLASSES*/
+/*GLOBAL CLASSES*/
+
+.primary-color{
+  color: var(--color-primary);
+}
+
+.secondary-color{
+    color: var(--color-secondary);
+}
+
+.tertiary-color{
+    color: var(--color-tertiary);
+}
+
+/*Change the highlighting color*/
+::selection {
+  color: #fff;
+  background: #cecece; 
+}
+
+.main-content{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.slant-top-left{
+
+}
+
+.slant-top-right{
+
+}
+
+.slant-bottom-left{
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+}
+
+.slant-bottom-right{
+  
+}
+
+/*MEDIA QUERiES*/
+@media only screen and (max-width: 768px) {
+  .main-content{
+	    width: 90%;
+	}
+
+	h1 {
+		  font-size: 35px;
+	}
+
+	h2{
+		  font-size: 30px;
+	}
+
+  .hide-on-mobile{
+      display: none;
+  }
+}
+
+@media only screen and (min-width: 769px){
+    .main-content{
+	    width: 90%;
+	}
+}
+
+@media only screen and (min-width: 992px){
+    .main-content{
+	    width: 85%;
+	}
+}
+
+
+@media only screen and (min-width: 1200px){
+    .main-content{
+	    width: 80%;
+	}
+}
+
+@media only screen and (min-width: 1600px){
+    .main-content{
+	    width: 70%;
+	}
+}
+
+@media only screen and (min-width: 1900px){
+    .main-content{
+	    width: 59%;
+	}
+}
+
+@media only screen and (min-width: 2560px){
+    .main-content{
+      width: 50%;
+  }
+}

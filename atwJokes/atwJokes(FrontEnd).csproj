@@ -75,12 +75,31 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\agile.alerts.css" />
+    <Content Include="css\agile.base.v1.css" />
+    <Content Include="css\agile.custom.css" />
+    <Content Include="css\agile.data.css" />
+    <Content Include="css\agile.forms.css" />
+    <Content Include="css\agile.fx.css" />
+    <Content Include="css\agile.images.css" />
+    <Content Include="css\agile.import.css" />
+    <Content Include="css\agile.navigation.css" />
+    <Content Include="css\agile.normalize.css" />
+    <Content Include="css\agile.typography.css" />
     <Content Include="Global.asax" />
+    <Content Include="index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

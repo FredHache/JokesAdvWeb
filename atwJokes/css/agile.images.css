@@ -1,0 +1,50 @@
+/*HERO IMAGE*/
+.img-hero-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: initial;
+    z-index: -999;
+}
+
+.img-hero-container-slant{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    position: initial;
+    z-index: -999;
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+}
+
+.img-hero-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-hero-text {
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4em;
+}
+
+
+/*IMAGE EFFECTS*/
+.img-darken{
+    filter: brightness(59%); 
+}
+
+@media only screen and (max-width: 768px) {
+    .img-hero-text{
+        font-size: 2.75em;
+    }
+}
+
+.img-rounded{
+    border-radius: 100%;
+}
+

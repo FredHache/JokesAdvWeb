@@ -1,0 +1,63 @@
+/*
+
+This is where you'll add your custom CSS to make the website more to what you or the client is looking for.
+
+****IMPORTANT****
+ANYTHING Involving variables such as the primary and seconday colors can be modified from the agile.base.css file. BE WARNED - THIS DOES AFFECT THE SITE COLORS SITE WIDE.
+
+
+*/
+
+.a-meta{
+    color: #999;
+    font-size: 13px;
+    padding-right: 10px;
+}
+
+.DropDownList {
+    border: none;
+    border: 2px solid var(--color-primary);
+    width: 100%;
+}
+
+.jokeTitle {
+    padding: 0;
+}
+
+.grid-col-9-pad{
+    padding: 0 40px;
+}
+
+html {
+    background: #ECE9E6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+@media only screen and (max-width: 768px) { /*phone Screens and under*/
+    .grid-col-9-pad {
+        padding: 50px 5%;
+    }
+}
+
+@media only screen and (min-width: 769px){ /*phone Screens*/
+    
+}
+
+@media only screen and (min-width: 992px){ /*usual table Screens*/
+    
+}
+
+
+@media only screen and (min-width: 1200px){ /*around laptop Screens*/
+    
+}
+
+@media only screen and (min-width: 1600px){ /*Desktop Screens*/
+    
+}
+
+@media only screen and (min-width: 1900px){ /*LAAAARGE Screens*/
+    
+}

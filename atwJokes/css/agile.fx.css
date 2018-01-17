@@ -1,0 +1,186 @@
+
+/*All effects (unless specficied) will have a 0.2 second transition time*/
+[class*='fx-'] {
+    transition: .2s;
+}
+
+.fx-wiggle:hover{
+	animation: wiggle .7s ease-in-out;
+}
+
+@keyframes wiggle {
+	0%{
+		transform: rotate(0deg);
+	}
+	20%{
+		transform: rotate(7deg);
+	}
+	40%{
+		transform: rotate(-7deg);
+	}
+	60%{
+		transform: rotate(7deg);
+	}
+	80%{
+		transform: rotate(-7deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+	
+}
+
+.fx-tilt-right:hover{
+	transform: rotate(7deg);
+}
+
+.fx-tilt-left:hover{
+	transform: rotate(-7deg);
+}
+
+.fx-up:hover{
+	transform: translateY(-10px);
+}
+
+.fx-down:hover{
+	transform: translateY(10px);
+}
+
+.fx-grow:hover{
+	transform: scale(1.2, 1.2);
+}
+
+.fx-shrink:hover{
+	transform: scale(0.8, 0.8);
+}
+
+.fx-spin{
+	transition: 0.8s;
+}
+
+.fx-spin:hover{
+	transform: rotate(360deg);
+}
+
+.fx-glow:hover{
+	filter: drop-shadow(0px 0px 7px #ccc);
+}
+
+.fx-fade-in{
+	animation: fadein .7s ease-in-out;
+}
+
+.fx-fade-out{
+	animation: fadeout .7s ease-in-out;
+}
+
+@keyframes fadein{
+	from 	{opacity: 0;}
+	to 		{opacity: 1;}
+}
+
+@keyframes fadeout{
+	from 	{opacity: 1;}
+	to 		{opacity: 0;}
+}
+
+.fx-swipe:hover{
+	animation: swipe .7s ease-in-out;
+}
+
+@keyframes swipe {
+	/*Start*/
+	0%{
+		transform: translateX(0px);
+	}
+
+	40%{
+		transform: translateY(10px) translateX(-7px);
+	}
+
+	66%{
+		transform: translateY(10px) translateX(50px) rotate(-10deg);
+	}
+
+	/*End*/
+	100%{
+		transform: translateX(0px) translateY(0px);
+	}
+	
+}
+
+
+.fx-boom:hover{
+	animation: boom .7s ease-in-out;
+}
+
+@keyframes boom {
+	/*Start*/
+	0%{
+		transform: translateY(0px) rotate(0deg);
+	}
+
+	20%{
+		transform: translateY(-25px) rotate(7deg);
+	}
+	40%{
+		transform: translateY(-25px) rotate(-7deg);
+	}
+	60%{
+		transform: translateY(-25px) rotate(7deg);
+	}
+	80%{
+		transform: translateY(-25px) rotate(-7deg);
+	}
+
+	/*End*/
+	100%{
+		transform: translateY(0px) rotate(0deg);
+	}
+	
+}
+
+.fx-text-input-basic:focus{
+	border: 2px solid var(--color-secondary) !important;
+}
+
+.fx-text-input-grow{
+	width: 75% !important;
+	transition: .2s;
+}
+
+.fx-text-input-grow:focus{
+	width: 100% !important;
+	border-bottom: 2px solid var(--color-secondary) !important;
+}
+
+.fx-btn-click:active{
+	transform: translateY(-4px);
+}
+
+
+/*
+Add this to the element that should trigger this effect when hovered. 
+This will select the CHILD element of that element.
+*/
+
+@media only screen and (min-width: 769px) {
+	.fx-drop-down-menu:hover > div{
+		animation: dropdownmenu .2s ease-in-out;
+	}
+
+
+	@keyframes dropdownmenu {
+		/*Start*/
+		0%{
+			transform: translateY(-20px);
+			opacity: 0;
+		}
+		/*End*/
+		100%{
+			transform: translateY(0px);
+			opacity: 1;
+		}
+		
+	}
+}

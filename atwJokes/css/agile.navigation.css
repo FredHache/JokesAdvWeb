@@ -1,0 +1,154 @@
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.nav-bump{
+    margin-top: 79px;
+}
+
+.nav-bump-bottom{
+    margin-bottom: 79px;
+}
+
+.nav-top{
+    border-bottom: 1px solid #151515;
+    background-color: var(--nav-bg-color);
+    text-align: left;
+    height: auto;
+    line-height: 60px;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    z-index: 999;
+    font-size: 1.2em;
+}
+
+.nav-sticky{
+    border-bottom: 1px solid #151515;
+    background-color: var(--nav-bg-color);
+    text-align: left;
+    height: auto;
+    line-height: 60px;
+    padding: 0 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    z-index: 999;
+    font-size: 1.2em;
+}
+
+.nav-links{
+    margin: 0 30px 0 0;
+}
+
+.nav-links a{
+    padding: 0 2%;
+}
+
+.nav-links {
+    color: var(--nav-color);
+    margin: 0 10px;
+    line-height: 60px;
+}
+
+.nav-top label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 60px;
+    display: none;
+    color: #fff;
+}
+
+#toggle{
+    display: none;
+}
+
+.nav-site-name{
+    font-size: 1.3em;
+}
+
+@media only screen and (max-width: 768px) {
+    /*Hamburger menu*/
+
+    .nav-top{
+        padding: 0;
+        width: 100%;
+        height: 60px;
+    }
+
+    .nav-top label {
+        display: block;
+        cursor: pointer;
+        padding: 0 10%;
+    }
+
+    .nav-links{
+        text-align: left;
+        width: 225px;
+        display: none;
+        background-color: var(--nav-bg-color);
+        margin: 0;
+        height: 100vh;
+        overflow-y: scroll;
+        padding-bottom: 150px;
+    }
+
+    .nav-links a{
+        display: block;
+        margin: 0;
+        padding-left: 25px;
+    }
+
+    .nav-links a:hover{
+        background-color: #262626;
+    }
+
+    .nav-site-name{
+        padding-left: 25px;
+    }
+
+    #toggle:not(:checked) + .nav-links{
+        display: block;
+        transition: .4s;
+        transform: translateX(-225px);
+    }
+
+    #toggle:checked + .nav-links{
+        display: block;
+        transition: .4s;
+    }
+
+    .nav-dropdown-content{
+        padding-left: 35px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    /*Full menu*/
+    .nav-dropdown{
+        position: relative;
+        display: inline-block;
+    }
+
+    .nav-dropdown-content{
+        position: absolute;
+        background-color: var(--nav-bg-color);
+        width: auto;
+        padding: 0 10px;
+        display: none;
+    }
+
+    .nav-dropdown-content a{
+        display: block;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-content{
+        display: block;
+    }
+}
+

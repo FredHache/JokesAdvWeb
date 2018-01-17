@@ -1,0 +1,56 @@
+/*TYPOGRAPHY*/
+.font-heavy{
+    font-weight: bold;
+}
+
+.font-normal{
+    font-weight: normal;
+}
+
+.font-light{
+    font-weight: 300;
+}
+
+.font-lighter{
+    font-weight: lighter;
+}
+
+.font-left{
+    text-align: left;
+}
+
+.font-right{
+    text-align: right;
+}
+
+.font-center{
+    text-align: center;
+}
+
+.font-justify {
+    text-align: justify;
+}
+
+.font-xsmall{
+    font-size: 8px;
+}
+
+.font-small{
+    font-size: 12px;
+}
+
+.font-medium{
+    font-size: 18px;
+}
+
+.font-average{
+    font-size: 1em;
+}
+
+.font-large{
+    font-size: 24px;
+}
+
+.font-xlarge{
+    font-size: 30px;
+}
