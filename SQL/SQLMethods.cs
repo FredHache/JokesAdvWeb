@@ -14,7 +14,7 @@ namespace SQL
         //Display All Jokes Category
         public static DataTable RetrieveAllJokesCategory()
         {
-            return DAL.DataAccessLayer.GetDataTable("getJokesCategories");
+            return DAL.DataAccessLayer.GetDataTable("getJokeCategories");
         }
 
         //Select Jokes from Category

@@ -7,7 +7,7 @@ using Types;
 
 namespace BOL
 {
-    class CUD
+    public static class CUD
     {
         // ADD JOKE
         public static bool AddJoke(Joke joke)

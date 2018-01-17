@@ -13,24 +13,39 @@
         <div class="main-content">
             <h1 class="font-center">N-Tier Jokes</h1>
             <h2 class="font-center">By team Fred, Nate, and Nick</h2>
+            <a href="createNewJoke.aspx" class="font-center">Create a new joke</a>
             <div class="grid-container">
                 <div class="grid-row">
                     <div class="grid-col-3-pad">
                         <p>Joke Categories</p>
-                        <asp:DropDownList ID="ddlCategories" runat="server" CssClass="DropDownList">
-                        </asp:DropDownList>
+                        <asp:DropDownList ID="ddlCategories" runat="server" AppendDataBoundItems="true" AutoPostBack="true" CssClass="DropDownList" OnSelectedIndexChanged="ddlCategories_SelectedIndexChanged">
+               <asp:ListItem>--Select a Category--</asp:ListItem>
+           </asp:DropDownList>
                     </div>
                     <div class="grid-col-9-pad">
-                        <p class="font-xlarge jokeTitle">Joke Title</p>
-                        <span class="a-meta">Joke ID: </span>
-                        <span class="a-meta">Created at: </span>
-                        <span class="a-meta">User ID: </span>
-                        <span class="a-meta">Category ID: </span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consectetur libero sed dolor eleifend, eu euismod nulla tempus. Nulla varius rhoncus nunc quis ullamcorper. Aliquam quis enim dictum libero volutpat rutrum vitae id nisi. Nullam a risus in sem aliquam maximus vel non nulla. Phasellus at tempor ipsum. Suspendisse sit ame....</p>
+                        <asp:Repeater ID="rptJokesByCat" runat="server">
+                            <ItemTemplate>
+                                <p class="font-xlarge jokeTitle"><%#Eval("title") %></p>
+                                <span class="a-meta">Joke ID: <%#Eval("id") %></span>
+                                <span class="a-meta">Created at: <%#Eval("created_at") %></span>
+                                <span class="a-meta">User ID: <%#Eval("user_id") %></span>
+                                <span class="a-meta">Category ID: <%#Eval("category_id") %></span>
+                                <span class="a-meta">featured: <%#Eval("featured") %></span>
+                                <p><%#Eval("teaser") %></p>
+                                <span><a href="fullJoke.aspx?jid=<%#Eval("id") %>">See full joke</a> | <a href="update.aspx?jid=<%#Eval("id") %>">Update joke</a></span>
+                                <br />
+                                <br />
+                                <br />
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
             </div>
         </div>
     </form>
+    <footer class="footer">
+        <p>Jokes DB N-Tier app by Fred Hache, Nathan Noye, Nick Toogood. &copy; 2017</p>
+        <span><a href="createNewJoke.aspx">Create a new joke</a></span>
+    </footer>
 </body>
 </html>

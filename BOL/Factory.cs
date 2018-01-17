@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BOL
 {
-    class Factory
+    public static class Factory
     {
         //Create contact method
         public static Joke CreateJoke()

@@ -75,6 +75,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="createNewJoke.aspx" />
     <Content Include="css\agile.alerts.css" />
     <Content Include="css\agile.base.v1.css" />
     <Content Include="css\agile.custom.css" />
@@ -86,11 +87,27 @@
     <Content Include="css\agile.navigation.css" />
     <Content Include="css\agile.normalize.css" />
     <Content Include="css\agile.typography.css" />
+    <Content Include="fullJoke.aspx" />
     <Content Include="Global.asax" />
     <Content Include="index.aspx" />
+    <Content Include="update.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="createNewJoke.aspx.cs">
+      <DependentUpon>createNewJoke.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="createNewJoke.aspx.designer.cs">
+      <DependentUpon>createNewJoke.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fullJoke.aspx.cs">
+      <DependentUpon>fullJoke.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fullJoke.aspx.designer.cs">
+      <DependentUpon>fullJoke.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -102,10 +119,23 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="update.aspx.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="update.aspx.designer.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BOL\BOL.csproj">
+      <Project>{5be3d94c-eacb-4450-b510-73dacc9860c1}</Project>
+      <Name>BOL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

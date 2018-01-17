@@ -18,6 +18,8 @@ ANYTHING Involving variables such as the primary and seconday colors can be modi
     border: none;
     border: 2px solid var(--color-primary);
     width: 100%;
+    padding: 12px;
+    font-size: 20px;
 }
 
 .jokeTitle {
@@ -34,10 +36,18 @@ html {
     background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+a {
+    color: var(--color-tertiary);
+}
+
 
 @media only screen and (max-width: 768px) { /*phone Screens and under*/
     .grid-col-9-pad {
         padding: 50px 5%;
+    }
+
+    .button{
+        width: 100%;
     }
 }
 
@@ -60,4 +70,120 @@ html {
 
 @media only screen and (min-width: 1900px){ /*LAAAARGE Screens*/
     
+}
+
+
+
+
+
+/*Alert boxes and such*/
+.alert-container {
+    width: 50%;
+    color: #fff;
+    padding: 1px 35px;
+    border-radius: 3px;
+    font-size: 1.10em;
+    transition: .5s;
+    border-bottom: #4b8c53 2px solid;
+}
+
+
+.alert-green {
+    background-color: #69BC70;
+}
+
+.alert-exit {
+    transition: .2s;
+}
+
+
+    .alert-exit:checked + .alert-container {
+        opacity: 0;
+        transform: translateY(-100px);
+        /*display: none;*/
+    }
+
+.font-strong {
+    font-weight: bold;
+}
+
+#exit {
+    display: inline-block;
+    transition: .2s;
+    float: right;
+    color: #fff;
+}
+
+    #exit:hover label {
+        cursor: pointer;
+        color: black;
+    }
+
+#message {
+    display: inline-block;
+}
+
+#alertexit1 {
+    display: none;
+}
+
+
+.alert-container {
+    position: fixed;
+    left: 25%;
+    top: 10px
+}
+
+    .alert-container p {
+        color: #fff;
+    }
+
+.alert-container-fail p {
+    color: #fff;
+}
+
+.alert-red {
+    background-color: #f72c2c;
+}
+
+.alert-container-fail {
+    width: 50%;
+    color: #fff;
+    padding: 1px 35px;
+    border-radius: 3px;
+    font-size: 1.10em;
+    transition: .5s;
+    border-bottom: #c62121 2px solid;
+}
+
+.alert-container-fail {
+    position: fixed;
+    left: 25%;
+    top: 10px
+}
+
+.alert-exit-fail:checked + .alert-container-fail {
+    opacity: 0;
+    transform: translateY(-100px);
+    /*display: none;*/
+}
+
+#exitErr {
+    display: inline-block;
+    transition: .2s;
+    float: right;
+    color: #fff;
+}
+
+    #exitErr:hover label {
+        cursor: pointer;
+        color: black;
+    }
+
+#messageErr {
+    display: inline-block;
+}
+
+#alertexit2 {
+    display: none;
 }

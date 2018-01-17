@@ -21,28 +21,29 @@ input[type=text], input[type=email]{
 	color: #75756F;
 }
 
-textarea{
-	border: none;
-	border: 2px solid var(--color-primary);
-	background-color: rgba(0, 0, 0, 0);
-	padding: 10px;
-	color: #fff;
-	width: 100%;
-	font-size: 20px;
-	margin-top: 5px;
-	margin-bottom: 20px;
-	min-width: 100%;
-	max-width: 100%;
-	min-height: 75px;
-	resize: none;
+textarea {
+    border: none;
+    border: 2px solid var(--color-primary);
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 75px;
+    resize: none;
+    color: #747474;
 }
 
-button{
+.button{
 	font-size: 24px;
 	padding: 5px 10px;
 }
 
-button:hover{
+.button:hover{
 	cursor: pointer;
 }
 
