@@ -49,6 +49,10 @@
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SQL\SQL.csproj">
+      <Project>{45bd9d11-191c-4bb1-bf8c-dfe7696c9777}</Project>
+      <Name>SQL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Types\Types.csproj">
       <Project>{4dfb17d9-2a3b-4932-853e-20d5729295a1}</Project>
       <Name>Types</Name>

@@ -9,11 +9,16 @@ namespace BOL
 {
     class Factory
     {
+        //Create contact method
+        public static Joke CreateJoke()
+        {
+            return new Joke();
+        }
 
         // Category LIST
         public static List<CategoryLookupList> CategoryListFactory()
         {
-            DataTable tmpTable = ;// ADD SQL STATEMENT THINGY
+            DataTable tmpTable = SQL.JokesSQL.RetrieveAllJokesCategory();
             List<CategoryLookupList> tmpCategoryTable = categoryListRepackage(tmpTable);
             return tmpCategoryTable;
         }
@@ -36,7 +41,7 @@ namespace BOL
         // JOKE LIST
         public static List<JokeLookupList> JokeByCategoryListFactory(int CategoryID)
         {
-            DataTable tmpTable = ;// ADD SQL STATEMENT THINGY
+            DataTable tmpTable = SQL.JokesSQL.RetrieveJokesByCategory(CategoryID);
             List<JokeLookupList> tmpJokeTable = jokeByCategoryListRepackage(tmpTable);
             return tmpJokeTable;
         }
@@ -62,24 +67,24 @@ namespace BOL
         }
 
         // JOKE BY ID
-        public static JokeLookupList JokeByIDFactory(int JokeID)
+        public static Joke JokeByIDFactory(int JokeID)
         {
-            DataTable tmpTable = ;// ADD SQL STATEMENT THINGY
-            JokeLookupList tmpJokeTable = jokeByIDRepackage(tmpTable);
+            DataTable tmpTable = SQL.JokesSQL.RetrieveJokesDetails(JokeID);
+            Joke tmpJokeTable = jokeByIDRepackage(tmpTable.Rows[0]);
             return tmpJokeTable;
         }
-        private static JokeLookupList jokeByIDRepackage(DataTable myTable)
+        private static Joke jokeByIDRepackage(DataRow myRow)
         {
-            JokeLookupList joke = new JokeLookupList();
+            Joke joke = new Joke();
 
-            joke.id = Convert.ToInt32(myTable.Rows[0]["id"]);
-            joke.title = myTable.Rows[0]["title"].ToString();
-            joke.teaser = myTable.Rows[0]["teaser"].ToString();
-            joke.joke_text = myTable.Rows[0]["joke_text"].ToString();
-            joke.created_at = Convert.ToDateTime(myTable.Rows[0]["created_at"]);
-            joke.user_id = Convert.ToInt32(myTable.Rows[0]["user_id"]);
-            joke.category_id = Convert.ToInt32(myTable.Rows[0]["category_id"]);
-            joke.featured = Convert.ToBoolean(myTable.Rows[0]["featured"]);
+            joke.id = Convert.ToInt32(myRow["id"]);
+            joke.title = myRow["title"].ToString();
+            joke.teaser = myRow["teaser"].ToString();
+            joke.joke_text = myRow["joke_text"].ToString();
+            joke.created_at = Convert.ToDateTime(myRow["created_at"]);
+            joke.user_id = Convert.ToInt32(myRow["user_id"]);
+            joke.category_id = Convert.ToInt32(myRow["category_id"]);
+            joke.featured = Convert.ToBoolean(myRow["featured"]);
             
             return joke;
         }
